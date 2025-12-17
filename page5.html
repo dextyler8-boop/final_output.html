@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith & Technology Integration</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+        color: #f0f0f0;
+        overflow-x: hidden;
+    }
+
+    header {
+        text-align: center;
+        padding: 60px 20px 30px;
+        background: rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+        font-size: 3em;
+        color: #ffdd59;
+        margin: 0;
+        text-shadow: 2px 2px 5px #000;
+    }
+
+    header p {
+        font-size: 1.2em;
+        color: #ffffff;
+        margin-top: 10px;
+    }
+
+    .highlight {
+        color: #ffdd59;
+        text-shadow: 0 0 5px #ffdd59, 0 0 10px #ffdd59, 0 0 20px #ffdd59;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px #ffdd59, 0 0 10px #ffdd59, 0 0 20px #ffdd59; }
+        100% { text-shadow: 0 0 20px #ffdd59, 0 0 40px #ffdd59, 0 0 60px #ffdd59; }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.05);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+    }
+
+    .card img {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #ffdd59;
+    }
+
+    .card p {
+        font-size: 1em;
+        line-height: 1.5;
+        color: #ddd;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 30px 20px;
+        background: rgba(0,0,0,0.5);
+        color: #bbb;
+        font-size: 0.9em;
+    }
+
+    /* Animated "message flow" background */
+    .message-flow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .message {
+        position: absolute;
+        color: #ffdd59;
+        font-weight: bold;
+        font-size: 1.2em;
+        opacity: 0.7;
+        animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+        10% { opacity: 1; }
+        100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Faith & Technology</h1>
+    <p>Harnessing technology to spread <span class="highlight">positivity</span> and spiritual messages online.</p>
+</header>
+
+<section class="cards">
+    <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/online-support.png" alt="Social Media">
+        <h3>Social Media Outreach</h3>
+        <p>Share uplifting posts, devotionals, and motivational quotes to inspire others daily.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/video.png" alt="Video Content">
+        <h3>Inspirational Videos</h3>
+        <p>Create short, shareable videos or animations to convey messages of hope and faith.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/email.png" alt="Emails">
+        <h3>Faith-Based Emails</h3>
+        <p>Send newsletters, prayers, and positive reminders to communities around the world.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/chat.png" alt="Apps">
+        <h3>Messaging Apps</h3>
+        <p>Utilize chat apps to share scriptures, motivational messages, and encouragement daily.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/cloud.png" alt="Cloud Collaboration">
+        <h3>Cloud Collaboration</h3>
+        <p>Create and share digital devotionals, eBooks, and other resources to spread goodness online.</p>
+    </div>
+</section>
+
+<div class="footer">
+    &copy; 2025 Faith & Technology Integration | Spreading positivity, one click at a time.
+</div>
+
+<div class="message-flow" id="messageFlow"></div>
+
+<script>
+    // Generate floating messages for spiritual positivity effect
+    const messages = [
+        "Hope", "Faith", "Love", "Peace", "Inspiration", 
+        "Kindness", "Gratitude", "Prayer", "Joy", "Light"
+    ];
+
+    const container = document.getElementById('messageFlow');
+
+    function createMessage() {
+        const msg = document.createElement('div');
+        msg.classList.add('message');
+        msg.textContent = messages[Math.floor(Math.random() * messages.length)];
+        msg.style.left = Math.random() * 100 + 'vw';
+        msg.style.animationDuration = 5 + Math.random() * 5 + 's';
+        container.appendChild(msg);
+
+        setTimeout(() => {
+            container.removeChild(msg);
+        }, 10000);
+    }
+
+    setInterval(createMessage, 800);
+</script>
+
+</body>
+</html>

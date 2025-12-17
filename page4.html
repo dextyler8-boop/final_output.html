@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Ethics & Online Kindness</title>
+<style>
+    /* General body styling */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #ccefff, #f0f8ff);
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    header {
+        background: linear-gradient(90deg, #4da6ff, #0073e6);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Animated header text */
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+        animation: floatText 3s ease-in-out infinite;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    @keyframes floatText {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+
+    .section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255,255,255,0.75);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h2 {
+        color: #0073e6;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, #4da6ff, #0073e6);
+        display: block;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    .guidelines {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Interactive cards */
+    .guideline-card {
+        background: rgba(116, 155, 232, 0.6);
+        border-radius: 15px;
+        padding: 25px 20px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.4s, box-shadow 0.4s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .guideline-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0,123,255,0.3);
+    }
+
+    .guideline-card h3 {
+        color: #004080;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0,115,230,0.1);
+        margin-top: 40px;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    }
+
+    a {
+        color: #0073e6;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #004080;
+        text-decoration: underline;
+    }
+
+    /* Floating messages animation */
+    .floating-message {
+        position: absolute;
+        font-weight: bold;
+        color: rgba(255,215,0,0.7);
+        font-size: 1.5rem;
+        pointer-events: none;
+        animation: floatUp 8s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(1); opacity: 0; }
+        50% { opacity: 0.7; }
+        100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px){
+        .guideline-card { width: 45%; }
+    }
+
+    @media(max-width: 480px){
+        .guideline-card { width: 90%; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Educational or Informational</h1>
+    <p>Practice honesty, respect, and responsibility in the digital world.</p>
+
+    <!-- Floating messages -->
+    <span class="floating-message" style="left:10%;">💡 Kindness</span>
+    <span class="floating-message" style="left:30%; animation-delay: 2s;">✨ Respect</span>
+    <span class="floating-message" style="left:50%; animation-delay: 4s;">🌟 Integrity</span>
+    <span class="floating-message" style="left:70%; animation-delay: 6s;">💖 Positivity</span>
+    <span class="floating-message" style="left:10%;">💡 Kindness</span>
+    <span class="floating-message" style="left:30%; animation-delay: 2s;">✨ Respect</span>
+    <span class="floating-message" style="left:50%; animation-delay: 4s;">🌟 Integrity</span>
+    <span class="floating-message" style="left:70%; animation-delay: 6s;">💖 Positivity</span>
+
+</header>
+
+<section class="section" id="introduction">
+    <h2>Introduction</h2>
+    <p>The internet is a powerful tool for learning, sharing, and connecting. Ethical digital practices ensure we interact online with respect, honesty, and kindness. By following these principles, we can make the digital world safer and more positive for everyone.</p>
+</section>
+
+<section class="section" id="guidelines">
+    <h2>Key Ethical Guidelines</h2>
+    <div class="guidelines">
+        <div class="guideline-card">
+            <h3>Online Kindness</h3>
+            <p>Communicate respectfully, avoid cyberbullying, and support others positively.</p>
+        </div>
+        <div class="guideline-card">
+            <h3>Honesty in Creation</h3>
+            <p>Credit original authors, avoid plagiarism, and be truthful in your digital content.</p>
+        </div>
+        <div class="guideline-card">
+            <h3>Privacy & Safety</h3>
+            <p>Protect your personal information and respect others’ privacy online.</p>
+        </div>
+        <div class="guideline-card">
+            <h3>Responsible Sharing</h3>
+            <p>Share accurate information and verify sources before posting content.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="tips">
+    <h2>Practical Tips for Digital Ethics</h2>
+    <ul>
+        <li>Think before you post – consider the impact of your words.</li>
+        <li>Use secure passwords and keep personal info private.</li>
+        <li>Give credit when using someone else's work or ideas.</li>
+        <li>Report harmful or misleading content responsibly.</li>
+        <li>Encourage friends and peers to practice online kindness.</li>
+    </ul>
+</section>
+
+<section class="section" id="resources">
+    <h2>Further Learning</h2>
+    <ul>
+        <li><a href="https://www.commonsense.org/education/digital-citizenship" target="_blank">Digital Citizenship Education</a></li>
+        <li><a href="https://www.staysafeonline.org/" target="_blank">Stay Safe Online</a></li>
+        <li><a href="https://www.childnet.com/" target="_blank">Childnet International</a></li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2025 Kate Jalem | Promoting Ethical Digital Practices
+</footer>
+
+</body>
+</html>
